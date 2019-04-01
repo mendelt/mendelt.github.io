@@ -1,7 +1,8 @@
 
+source: "./"
 site:
-  title: cobalt blog
-  description: Blog Posts Go Here
-  base_url: http://example.com
+  title: Mendelt Siebenga
+  description: no dancing hamsters
+  base_url: https://mendelt.github.io
 posts:
   rss: rss.xml
