@@ -6,3 +6,6 @@ site:
   base_url: https://mendelt.github.io
 posts:
   rss: rss.xml
+  dir: posts
+  drafts_dir: _drafts
+  order: Desc
