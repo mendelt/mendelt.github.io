@@ -1,6 +1,7 @@
 sudo: false
-before-script:
-  - curl -LSfs https://japaric.github.io/trust/install.sh | sh -s --
+before_script:
+  - curl -LSfs https://japaric.github.io/trust/install.sh |
+    sh -s --
     --git cobalt-org/cobalt.rs
     --crate cobalt
     --force
@@ -13,7 +14,7 @@ script:
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $GH_TOKEN
+  github_token: $GITHUB_TOKEN
   local_dir: _site
   target_branch: master
   keep-history: true
