@@ -16,6 +16,7 @@ deploy:
   github_token: $GH_TOKEN
   local_dir: _site
   target_branch: master
+  keep-history: true
   on:
     branch: source
 
