@@ -1,21 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Spectre.css blog template"/>
+    <meta name="keywords" content="spectre.css, blog, template"/>	
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
-
-    <meta charset="utf-8" />
     <title>{{ page.title }}</title>
+    <style>
+      .titlecol { height: 100vh; padding: 2em;}	
+    </style>
   </head>
-  <body>
-	  <div class="container">
-		  <div class="column col-4 col-sm-12 float-left bg-dark text-light" style="padding-top: 5em height: 100vh">
-			  <h2>{{ page.title }}</h2>
-		  </div>
-		  <div class="column col-8 col-sm-12 float-right bg-light text-dark">
-      {{ page.content }}
-		  </div>
-	  </div>
-  </body>
+<body>
+	<div class="container">
+		<div class="columns">
+			<div class="column col-4 col-sm-12 float-right bg-dark text-light titlecol" style="padding-left: 2em; padding-right: 2em;";>
+          <h6>Mendelt Siebenga</h6>
+          <div class="divider" style="padding-top: 1em;"></div>
+          <h2>{{ page.title }}</h4>
+			</div><!-- .column .col-4 .col-sm-12 -->
+
+			<div class="column col-8 col-sm-12 float-left" style="padding: 5em;">		
+        {{ page.content }}
+			</div><!-- .column .col-8 .col-sm-12 -->
+
+
+		</div><!-- .columns -->
+	</div><!-- .container .grid-960 -->
+</body>
 </html>
