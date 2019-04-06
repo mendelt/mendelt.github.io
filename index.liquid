@@ -2,12 +2,11 @@
 title: Posts
 layout: default.liquid
 ---
-<h1> {{ page.title }} </h1>
-
 {% for post in collections.posts.pages %}
   <div>
-    <h2>{{post.title}}</h2>
+    <h2>{{ post.title }}</h2>
     <a href="{{ post.permalink }}">{{ post.title }}</a>
+    {{ post.excerpt }}
   </div>
 {% endfor %}
 

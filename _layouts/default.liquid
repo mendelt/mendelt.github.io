@@ -13,21 +13,27 @@
       .titlecol { height: 100vh; padding: 2em;} 
     </style>
   </head>
-<body>
+  <body>
   <div class="container">
     <div class="columns">
-      <div class="column col-4 col-sm-12 float-right bg-dark text-light titlecol" style="padding-left: 2em; padding-right: 2em;";>
-          <h6>Mendelt Siebenga</h6>
+      <div class="column col-4 col-sm-12 float-right bg-dark text-light titlecol">
+        <a href="/"><h6>Mendelt Siebenga</h6></a>
           <div class="divider" style="padding-top: 1em;"></div>
-          <h2>{{ page.title }}</h4>
-      </div><!-- .column .col-4 .col-sm-12 -->
+          <h2>Posts</h2>
+          <ul>
+            {% for post in collections.posts.pages %}
+              <li><a href="{{ post.permalink }}"><b>{{ post.title }}</b></a></li>
+            {% endfor %}
+          </ul>
+          <h2>About</h2>
+      </div>
 
-      <div class="column col-8 col-sm-12 float-left" style="padding: 5em;">   
+      <div class="column col-8 col-sm-12 float-left" style="padding: 2em;">
+        <h6>{{ page.title }}</h6>
+        <div class="divider" style="padding-top: 1em;"></div>
         {{ page.content }}
-      </div><!-- .column .col-8 .col-sm-12 -->
-
-
-    </div><!-- .columns -->
-  </div><!-- .container .grid-960 -->
+      </div>
+    </div>
+  </div>
 </body>
 </html>
